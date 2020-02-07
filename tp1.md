@@ -5,7 +5,7 @@
 ## Exercice 2. Prise en main de l’interpréteur de commandes
 
 
-** Manuel
+* Manuel
 
 **1. A l’aide du manuel, identifiez le rôle de la commande which**
 *$which* localise une commande dans les dossiers et retourne le chemin de ficher pour accéder à la commande.
@@ -30,7 +30,7 @@ La section  6  décrit tous les jeux et les programmes amusants disponibles sur 
 
 
 
-** Navigation dans l’arborescence des fichiers
+* Navigation dans l’arborescence des fichiers
 
 
 **1. allez dans le dossier /var/log**
@@ -86,7 +86,7 @@ Cela ne fonctionne pas :  en effet le Dossier2 n'est pas vide et cette commande 
 
 
 
-** Commandes importantes
+* Commandes importantes
 
 **1. Quelle commande permet d’afficher l’heure ? A quoi sert la commande time ?**
 *$date* affiche l'heure et le jour
@@ -202,7 +202,7 @@ Une fois par jour, le système met à jour la base de données. On peut forcer l
 
 
 
-*Exercice 3. Découverte de l’éditeur de texte nano
+## Exercice 3. Découverte de l’éditeur de texte nano
 
 **1. Copiez le fichier /var/log/syslog dans votre dossier personnel sous le nom log.txt, puis ouvrez-le avec
 nano**
@@ -235,7 +235,7 @@ On quitte grâce à CTRL + X.
 
 
 
-*Exercice 4. Personnalisation du shell
+## Exercice 4. Personnalisation du shell
 
 Le shell par défaut est plutôt austère, mais il existe de nombreux moyens de le personnaliser, en modifiant
 le fichier ~/.bashrc.
