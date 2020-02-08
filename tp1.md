@@ -223,8 +223,8 @@ On remonte à la racine de la machine et on utilise *find . -name "passwd"*
 
 *find . -name "passwd" >~/list_passwd_files.txt 2>/dev/null*  
 Il y a deux redirections ici :  
-> >~/list_passwd_files.txt : redirige le résultat de la commande (sauf les erreurs) dans le fichier list_passwd_files.txt  
-> 2>/dev/null : redirige les erreurs éventuelles dans le fichier /dev/null.  
+>>~/list_passwd_files.txt : redirige le résultat de la commande (sauf les erreurs) dans le fichier list_passwd_files.txt  
+>2>/dev/null : redirige les erreurs éventuelles dans le fichier /dev/null.  
 
 **22. Dans votre dossier personnel, utilisez la commande grep pour chercher où est défini l’alias ll vu
 précédemment**  
