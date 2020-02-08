@@ -174,16 +174,17 @@ Après suppression de titi, on ne peut plus accéder au fichier tutu. En effet, 
 **13. Affichez à l’écran le fichier /var/log/syslog. Quels raccourcis clavier permettent d’interrompre et
 reprendre le défilement à l’écran ?**  
 
-*$cat /var/log/syslog* pour afficher le contenu du fichier  
+*cat /var/log/syslog* pour afficher le contenu du fichier  
 CTRL + S : interrompt le défilement  
 CTRL + Q : reprend le défilement  
 
 **14. Affichez les 5 premières lignes du fichier /var/log/syslog, puis les 15 dernières, puis seulement les
 lignes 10 à 20.**  
 
-*$head -5 toto* : affiche les 5 premières lignes de toto  
-*$tail -15 toto* : affiche les 15 dernières lignes de toto  
-*$head -n 20 toto | tail -n 11* : affiche les lignes 10 à 20 de toto (lignes 10 et 20 comprises)  
+*head -5 /var/log/syslog* : affiche les 5 premières lignes de /var/log/syslog  
+*tail -15 /var/log/syslog* : affiche les 15 dernières lignes de /var/log/syslog  
+*head -n 20 /var/log/syslog | tail -n 11* : affiche les lignes 10 à 20 de /var/log/syslog (lignes 10 et 20 comprises)  
+*head* sélectionne les 20 premières lignes qu'il passe par un pipe *|* à *tail* qui sélectionne les 10 dernières lignes de la sélection précédente. Finalement, on obtient les lignes 10 à 20.  
 
 **15. Que fait la commande dmesg | less ?**  
 
