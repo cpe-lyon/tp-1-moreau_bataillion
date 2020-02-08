@@ -310,8 +310,25 @@ de commande devrait immédiatement passer en couleurs.**
 
 
 
-**4. Modifiez l’invite de commande pour qu’elle s’aﬀiche sous la forme suivante :[heure]-user@host:chemin_courant$ où l’heure est aﬀichée en violet et entre crochets, et le chemin du dossier courant en cyan**  
+**4. Les couleurs par défauts (surtout celle du dossier courant) ne sont pas très visibles. Dans .bashrc, cherchez les lignes commençant par PS1= ; elles indiquent la mise en forme de l’invite de commande (selon que l’on est en couleurs ou non).**  
 
+Sur cette ligne, on peut distinguer un certain nombre de raccourcis :
+\u Nom de l’utilisateur
+\h Nom de la machine (hôte)
+\d Date
+\t Heure avec les secondes
+\A Heure sans les secondes
+\w Chemin complet du dossier courant
+
+Remarquez la séquence particulière : \[\033[1;32m]\u@\h\[\033[00m\] C’est cette instruction qui indique d’afficher le nom de l’utilisateur et de la machine en vert clair. Plus précisément :
+• un code couleur se place entre \[\033[ et \]
+• on peut remplacer \033 par \e (ce n’est pas forcément toujours plus lisible…)
+• un code couleur se termine toujours par la lettre m
+• le code couleur 00 efface toute mise en forme
+• on peut combiner différents attributs (couleur, souligné, clignotant, etc.) en les séparant par des
+points virgules
+
+**Modifiez l’invite de commande pour qu’elle s’aﬀiche sous la forme suivante :[heure]-user@host:chemin_courant$ où l’heure est aﬀichée en violet et entre crochets, et le chemin du dossier courant en cyan**  
 
 Pour faire l’heure entourée par des crochets en rouge : *\[033[01;31m\]\[[\A]\]:*  
 Pour faire le chemin en cyan : *\[\033[01;96m\]\w*  
