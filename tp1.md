@@ -113,7 +113,7 @@ Cela ne fonctionne pas :  en effet le Dossier2 n'est pas vide et cette commande 
 sur les fichiers commençant par un point ?**  
 
 *ls* affiche les éléments présents dans le dossier courant.  
-*la*affiche les éléments présents dans le dossier courant, y compris les éléments cachés, qui sont identifiés clairement en commençant par un point.  
+*la* affiche les éléments présents dans le dossier courant, y compris les éléments cachés, qui sont identifiés clairement en commençant par un point.  
 
 **3. Où se situe le programme ls ?**  
 
