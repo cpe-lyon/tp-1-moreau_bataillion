@@ -68,12 +68,12 @@ Cela est dû au fait que cd est une commande bash interne et que sudo ne s'appli
 
 **7. à partir de votre dossier personnel, créez l’arborescence suivante :**  
 
-`cd ~  
-mkdir -p Dossier1 Dossier2/{Dossier2.1,Dossier2.2}  
-cd Dossier2/Dossier2.2  
-touch Fichier2 Fichier3  
-cd ../../Dossier1  
-cd touch Fichier1`  
+`cd ~`  
+`mkdir -p Dossier1 Dossier2/{Dossier2.1,Dossier2.2}`  
+`cd Dossier2/Dossier2.2`  
+`touch Fichier2 Fichier3`  
+`cd ../../Dossier1`  
+`cd touch Fichier1`  
 
 **8. revenez dans votre dossier personnel ; à l’aide de la commande rm, essayez de supprimer Fichier1, puis
 Dossier1 ; que se passe-t-il ?**  
