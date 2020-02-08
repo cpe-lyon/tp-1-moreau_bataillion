@@ -166,7 +166,7 @@ Si l'on supprime fichier toto, titi continue à pointer vers le contenu de toto.
 contenu de titi ; quelle conséquence pour tutu ? Et inversement ? Supprimez le fichier titi ; quelle
 conséquence cela a-t-il sur tutu ?**  
 
-*$ln -s titi tutu* crée un fichier tutu lié symboliquement à titi.  
+*ln -s titi tutu* crée un fichier tutu lié symboliquement à titi.  
 Si l'on modifie le contenu de titi, le contenu de tutu est également modifié. En effet, tutu contient un lien vers titi. Toute modification du contenu de titi entraine une modification de tutu : le lien de tutu pointe vers le titi modifié.  
 Si l'on modifie le contenu de tutu, le contenu de titi est également modifié. Le lien de tutu pointant vers titi, on modifie en réalité directement le contenu de titi.  
 Après suppression de titi, on ne peut plus accéder au fichier tutu. En effet, le lien de tutu pointant vers titi et titi n'existant plus, le lien est mort.  
@@ -184,21 +184,21 @@ lignes 10 à 20.**
 *head -5 /var/log/syslog* : affiche les 5 premières lignes de /var/log/syslog  
 *tail -15 /var/log/syslog* : affiche les 15 dernières lignes de /var/log/syslog  
 *head -n 20 /var/log/syslog | tail -n 11* : affiche les lignes 10 à 20 de /var/log/syslog (lignes 10 et 20 comprises)  
-*head* sélectionne les 20 premières lignes qu'il passe par un pipe *|* à *tail* qui sélectionne les 10 dernières lignes de la sélection précédente. Finalement, on obtient les lignes 10 à 20.  
+*head* sélectionne les 20 premières lignes qu'il passe par un pipe * | * à *tail* qui sélectionne les 10 dernières lignes de la sélection précédente. Finalement, on obtient les lignes 10 à 20.  
 
 **15. Que fait la commande dmesg | less ?**  
 
-*$dmesg* affiche et contrôle le tampon des messages du noyau, l'ajout de *$ |less* permet d'afficher les informations page par page.  
+*dmesg* affiche et contrôle le tampon des messages du noyau, l'ajout de * |less* permet d'afficher les informations page par page.  
 
 **16. Affichez à l’écran le fichier /etc/passwd ; que contient-il ? Quelle commande permet d’afficher la page
 de manuel de ce fichier ?**  
 
-Le fichier /etc/passwd contient les références des différents utilisateurs qui peuvent se connecter au système. On a accès à des informations sur chaque utilisateur : son login, l'identifiant de l'utilisateur et l'identifiant du groupe, un ensemble de valeurs décrivants l'utilisateur (nom, emplacement...), le chemin vers le répertoire personnel de l'utilisateur et le programme qui est lancé chaque fois que l'utilisateur se connecte au système.  
-Avec la commande *$man 5 passwd*, on accède à la section 5 du manuel et à la page sur passwd : on y découvre le format du fichier /etc/passwd, comme détaillé à la question précédente.  
+Le fichier */etc/passwd* contient les références des différents utilisateurs qui peuvent se connecter au système. On a accès à des informations sur chaque utilisateur : son login, l'identifiant de l'utilisateur et l'identifiant du groupe, un ensemble de valeurs décrivants l'utilisateur (nom, emplacement...), le chemin vers le répertoire personnel de l'utilisateur et le programme qui est lancé chaque fois que l'utilisateur se connecte au système.  
+Avec la commande *man 5 passwd*, on accède à la section 5 du manuel et à la page sur passwd : on y découvre le format du fichier /etc/passwd, comme détaillé à la question précédente.  
 
 **17. Affichez seulement la première colonne triée par ordre alphabétique inverse**  
 
-*$cut -c1 /etc/passwd* affiche la première colonne de /etc/passwd. En ajoutant *$ | sort -d -r*, on trie cette colonne par ordre alphabétique (-d) inverse (-r). Finalement, on a : *$cut -c1 /etc/passwd | sort -dr*   
+*cut -c1 /etc/passwd* affiche la première colonne de /etc/passwd. En ajoutant * | sort -d -r*, on trie cette colonne par ordre alphabétique (-d) inverse (-r). Finalement, on a : *cut -c1 /etc/passwd | sort -dr*   
 
 **18. Quelle commande nous donne le nombre d’utilisateurs ayant un compte sur cette machine (pas seulement
 les utilisateurs connectés) ?**  
