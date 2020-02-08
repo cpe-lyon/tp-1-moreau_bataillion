@@ -184,11 +184,11 @@ lignes 10 à 20.**
 *head -5 /var/log/syslog* : affiche les 5 premières lignes de /var/log/syslog  
 *tail -15 /var/log/syslog* : affiche les 15 dernières lignes de /var/log/syslog  
 *head -n 20 /var/log/syslog | tail -n 11* : affiche les lignes 10 à 20 de /var/log/syslog (lignes 10 et 20 comprises)  
-*head* sélectionne les 20 premières lignes qu'il passe par un pipe * | * à *tail* qui sélectionne les 10 dernières lignes de la sélection précédente. Finalement, on obtient les lignes 10 à 20.  
+*head* sélectionne les 20 premières lignes qu'il passe par un pipe *|* à *tail* qui sélectionne les 10 dernières lignes de la sélection précédente. Finalement, on obtient les lignes 10 à 20.  
 
 **15. Que fait la commande dmesg | less ?**  
 
-*dmesg* affiche et contrôle le tampon des messages du noyau, l'ajout de * |less* permet d'afficher les informations page par page.  
+*dmesg* affiche et contrôle le tampon des messages du noyau, l'ajout de *|less* permet d'afficher les informations page par page.  
 
 **16. Affichez à l’écran le fichier /etc/passwd ; que contient-il ? Quelle commande permet d’afficher la page
 de manuel de ce fichier ?**  
@@ -201,7 +201,7 @@ Avec la commande *man 5 passwd*, on accède à la section 5 du manuel et à la p
 
 *cut -d: -f1 /etc/passwd* affiche la première colonne de */etc/passwd*.  
 On indique le symbole (ici :) qui délimite les colonnes (*-d:*) et on indique la colonne que l'on sélectionne dans le fichier (*-f1*). On obtient la liste des logins des utilisateurs de la machine.  
-En ajoutant * | sort -d -r*, on trie cette colonne par ordre alphabétique (*-d*) inverse (*-r*).  
+En ajoutant *| sort -d -r*, on trie cette colonne par ordre alphabétique (*-d*) inverse (*-r*).  
 Finalement, on a : *cut -d: -f1 /etc/passwd | sort -dr*   
 
 **18. Quelle commande nous donne le nombre d’utilisateurs ayant un compte sur cette machine (pas seulement
