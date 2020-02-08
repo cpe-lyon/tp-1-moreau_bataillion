@@ -229,18 +229,18 @@ Il y a deux redirections ici :
 **22. Dans votre dossier personnel, utilisez la commande grep pour chercher où est défini l’alias ll vu
 précédemment**  
 
-On utilise *$grep -r ll ./*. Ainsi on obtient toutes les correspondances à "ll" dans tous les fichiers présents au sein de notre dossier personnel (grâce à la récursivité de la recherche : -r). On obtient la correspondance suivante : dans ./.bashrc : alias ll='ls -alF'  
+On utilise *grep -r ll ./*. Ainsi on obtient toutes les correspondances à "ll" dans tous les fichiers présents au sein de notre dossier personnel (grâce à la récursivité de la recherche : -r). On obtient la correspondance suivante : dans ./.bashrc : *alias ll='ls -alF'*  
 
 **23. Utilisez la commande locate pour trouver le fichier history.log.**  
 
-On doit d'abord installer la commande locate avec *$sudo apt install mlocate*.  
-Ainsi, avec *$locate history.log*, on obtient : /var/log/apt/history.log  
+On doit d'abord installer la commande locate avec *sudo apt install mlocate*.  
+Ainsi, avec *locate history.log*, on obtient : /var/log/apt/history.log  
 
 **24. Créer un fichier dans votre dossier personnel puis utilisez locate pour le trouver. Apparaît-il ? Pourquoi ?**  
 
-On a créé un fichier dans notre dossier personnel grâce à *$touch Fichier*. En utilisant *$locate Fichier*, on n'obtient aucun résultat.  
+On a créé un fichier dans notre dossier personnel grâce à *touch Fichier*. En utilisant *locate Fichier*, on n'obtient aucun résultat.  
 En effet, le fichier Fichier vient d'être créé, il n'a pas encore été répertorié dans la base de données de la machine. La commande locate ne peut donc pas le détecter : elle ne lit pas le disque dur entier, seulement cette base de données.  
-Une fois par jour, le système met à jour la base de données. On peut forcer la mise à jour avec *$sudo updatedb*. Ainsi, on peut trouver le fichier Fichier.  
+Une fois par jour, le système met à jour la base de données. On peut forcer la mise à jour avec *sudo updatedb*. Ainsi, après cette mise à jour, on peut trouver le fichier Fichier avec locate.  
 
 
 
@@ -252,16 +252,16 @@ Une fois par jour, le système met à jour la base de données. On peut forcer l
 **1. Copiez le fichier /var/log/syslog dans votre dossier personnel sous le nom log.txt, puis ouvrez-le avec
 nano**  
 
-*$cp /var/log/syslog ~/log.txt* pour copier le fichier  
-*$nano log.txt* pour ouvrir le fichier grâce à nano  
+*cp /var/log/syslog ~/log.txt* pour copier le fichier  
+*nano log.txt* pour ouvrir le fichier grâce à nano  
 
 **2. Remplacez toutes les occurrences du mot kernel par le mot noyau**  
 
-On effectue un CTRL + | pou ouvrir la zone d'entrée. On entre d'abord le terme 'kernel' à remplacer, puis le terme 'noyau' en remplacement. On sélectionne 'A' pour remplacer toutes les occurences de kernel du fichier.  
+On effectue un CTRL + \ pou ouvrir la zone d'entrée de remplacement. On entre d'abord le terme 'kernel' à remplacer, puis le terme 'noyau' en remplacement. On sélectionne 'A' pour remplacer toutes les occurences de kernel du fichier.  
 
 **3. Déplacer les 10 premières lignes à la fin du fichier**  
 
-Se placer grâce aux flèches au début du fichier (ou grâce à CTRL + début). Faire Alt + A pour démarrer la sélection et sélectionner les lignes à déplacer grâce aux flèches. Faire CTRL + K pour couper la sélection. Se déplacer à la fin du fichier grâce à CTRL + Fin. Coller la sélection des 10 lignes grâce à CTRL + U.  
+On se place grâce aux flèches au début du fichier (ou grâce à CTRL + début). On fait Alt + A pour démarrer la sélection et sélectionner les lignes à déplacer grâce aux flèches. On fait CTRL + K pour couper la sélection. On se déplace à la fin du fichier grâce à CTRL + Fin. On colle la sélection des 10 lignes grâce à CTRL + U.  
 
 **4. Annulez cette action**  
 
