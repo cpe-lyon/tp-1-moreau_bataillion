@@ -68,6 +68,8 @@ Cela est dû au fait que cd est une commande bash interne et que sudo ne s'appli
 
 **7. à partir de votre dossier personnel, créez l’arborescence suivante :**  
 
+![alt tag](https://user-images.githubusercontent.com/60732108/74085596-d3e9c580-4a7a-11ea-8255-b8243d070417.PNG)   
+
 `cd ~`  
 `mkdir -p Dossier1 Dossier2/{Dossier2.1,Dossier2.2}`  
 `cd Dossier2/Dossier2.2`  
