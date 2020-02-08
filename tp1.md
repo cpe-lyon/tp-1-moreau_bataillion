@@ -199,9 +199,9 @@ Avec la commande *man 5 passwd*, on accède à la section 5 du manuel et à la p
 **17. Affichez seulement la première colonne triée par ordre alphabétique inverse**  
 
 
-*cut -d: -f1 /etc/passwd* affiche la première colonne de /etc/passwd. -d: : On indique le symbole (ici :) qui délimite les colonnes 
-(-d:) et on indique la colonne que l'on sélectionne dans le fichier (-f1). On obtient la liste des logins des utilisateurs de la machine.  
-En ajoutant * | sort -d -r*, on trie cette colonne par ordre alphabétique (-d) inverse (-r).  
+*cut -d: -f1 /etc/passwd* affiche la première colonne de */etc/passwd*.  
+On indique le symbole (ici :) qui délimite les colonnes (*-d:*) et on indique la colonne que l'on sélectionne dans le fichier (*-f1*). On obtient la liste des logins des utilisateurs de la machine.  
+En ajoutant * | sort -d -r*, on trie cette colonne par ordre alphabétique (*-d*) inverse (*-r*).  
 Finalement, on a : *cut -d: -f1 /etc/passwd | sort -dr*   
 
 **18. Quelle commande nous donne le nombre d’utilisateurs ayant un compte sur cette machine (pas seulement
