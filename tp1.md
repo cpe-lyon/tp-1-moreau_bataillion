@@ -207,21 +207,21 @@ Finalement, on a : *cut -d: -f1 /etc/passwd | sort -dr*
 **18. Quelle commande nous donne le nombre d’utilisateurs ayant un compte sur cette machine (pas seulement
 les utilisateurs connectés) ?**  
 
-*$lslogins* ???  
+*lslogins* ???  
 
 **19. Combien de pages de manuel comportent le mot-clé conversion dans leur description ?**  
 
-*$apropos conversion* ou *$man -k conversion* listent toutes les pages où le mot conversion est présent dans le résumé.  
+*apropos conversion* ou *man -k conversion* listent toutes les pages où le mot conversion est présent dans le résumé.  
 Ici, on en compte 4.  
 
 **20. A l’aide de la commande find, recherchez tous les fichiers se nommant passwd présents sur la machine**  
 
-On remonte à la racine de la machine et on utilise *$find . -name "passwd"*  
+On remonte à la racine de la machine et on utilise *find . -name "passwd"*  
 
 **21. Modifiez la commande précédente pour que la liste des fichiers trouvés soit enregistrée dans le fichier
 ~/list_passwd_files.txt et que les erreurs soient redirigées vers le fichier spécial /dev/null**  
 
-*$find . -name "passwd" >~/list_passwd_files.txt 2>/dev/null*  
+*find . -name "passwd" >~/list_passwd_files.txt 2>/dev/null*  
 Il y a deux redirections ici :  
 >~/list_passwd_files.txt : redirige le résultat de la commande (sauf les erreurs) dans le fichier list_passwd_files.txt  
 2>/dev/null : redirige les erreurs éventuelles dans le fichier /dev/null.  
