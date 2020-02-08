@@ -320,7 +320,7 @@ Sur cette ligne, on peut distinguer un certain nombre de raccourcis :
 \A Heure sans les secondes  
 \w Chemin complet du dossier courant  
 
-Remarquez la séquence particulière : \[\033[1;32m]\u@\h\[\033[00m\] C’est cette instruction qui indique d’afficher le nom de l’utilisateur et de la machine en vert clair. Plus précisément :  
+Remarquez la séquence particulière : *\[\033[1;32m]\u@\h\[\033[00m\]* C’est cette instruction qui indique d’afficher le nom de l’utilisateur et de la machine en vert clair. Plus précisément :  
 • un code couleur se place entre \[\033[ et \]  
 • on peut remplacer \033 par \e (ce n’est pas forcément toujours plus lisible…)  
 • un code couleur se termine toujours par la lettre m  
@@ -330,7 +330,7 @@ points virgules
 
 **Modifiez l’invite de commande pour qu’elle s’aﬀiche sous la forme suivante :[heure]-user@host:chemin_courant$ où l’heure est aﬀichée en violet et entre crochets, et le chemin du dossier courant en cyan**  
 
-Pour faire l’heure entourée par des crochets en rouge : *\[033[01;31m\]\[[\A]\]:*  
+Pour faire l’heure entourée par des crochets en rouge : *\[\033[01;31m\]\[[\A]\]:*  
 Pour faire le chemin en cyan : *\[\033[01;96m\]\w*  
 Ne pas oublier d’actualiser avec *source .bashrc*  
 
