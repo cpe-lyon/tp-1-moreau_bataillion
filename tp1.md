@@ -257,7 +257,7 @@ nano**
 
 **2. Remplacez toutes les occurrences du mot kernel par le mot noyau**  
 
-On effectue un CTRL + \ pou ouvrir la zone d'entrée de remplacement. On entre d'abord le terme 'kernel' à remplacer, puis le terme 'noyau' en remplacement. On sélectionne 'A' pour remplacer toutes les occurences de kernel du fichier.  
+On effectue un CTRL + \ pour ouvrir la zone d'entrée de remplacement. On entre d'abord le terme 'kernel' à remplacer, puis le terme 'noyau' en remplacement. On sélectionne 'A' pour remplacer toutes les occurences de kernel du fichier.  
 
 **3. Déplacer les 10 premières lignes à la fin du fichier**  
 
@@ -292,21 +292,21 @@ le fichier ~/.bashrc.
 
 **1. Commencez par créer une copie de ce fichier, que vous appellerez .bashrc_bak**  
 
-*$cp ~/.bashrc ~/.bashrc_bak*  
+*cp ~/.bashrc ~/.bashrc_bak*  
 
 **2. Editez le fichier .bashrc avec nano et décommentez la ligne force_color_prompt=yes pour activer
 la couleur. Enregistrez le fichier et quittez nano.**  
 
-*$nano .bashrc*  
-On fait CTRL + W pour trouver la ligne force_color_prompt=yes  
-On l'active en retirant le # en début de ligne.  
+*nano .bashrc*  
+On fait CTRL + W pour trouver la ligne *force_color_prompt=yes*  
+On le décommente en retirant le # en début de ligne.  
 On enregistre grâce à CTRL + S et on quitte grâce à CTRL + X.  
 
 **3. Le fichier .bashrc est lu au démarrage du shell ; pour le recharger, il faudrait donc se déconnecter
 puis se reconnecter ; mais il existe un autre moyen : la commande source .bashrc. Testez-la, l’invite
 de commande devrait immédiatement passer en couleurs.**  
 
-*$source .bashrc* passe le terminal en couleur.  
+*source .bashrc* actualise la lecture du fichier .bashrc et passe donc le terminal en couleur.  
 
 
 
@@ -315,7 +315,7 @@ de commande devrait immédiatement passer en couleurs.**
 
 Pour faire l’heure entourée par des crochets en rouge : *\[033[01;31m\]\[[\A]\]:*  
 Pour faire le chemin en cyan : *\[\033[01;96m\]\w*  
-Ne pas oublier d’actualiser avec *$source .bashrc*  
+Ne pas oublier d’actualiser avec *source .bashrc*  
 
 
 
