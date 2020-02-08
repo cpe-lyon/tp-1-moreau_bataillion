@@ -320,7 +320,7 @@ Sur cette ligne, on peut distinguer un certain nombre de raccourcis :
 \A Heure sans les secondes  
 \w Chemin complet du dossier courant  
 
-Remarquez la séquence particulière : *\[\033[1;32m]\u@\h\[\033[00m\]* C’est cette instruction qui indique d’afficher le nom de l’utilisateur et de la machine en vert clair. Plus précisément :  
+Remarquez la séquence particulière : *\[\033[1;32m\]\u@\h\[\033[00m\]:* C’est cette instruction qui indique d’afficher le nom de l’utilisateur et de la machine en vert clair, suivit de : en blanc. Plus précisément :  
 • un code couleur se place entre \[\033[ et \]  
 • on peut remplacer \033 par \e (ce n’est pas forcément toujours plus lisible…)  
 • un code couleur se termine toujours par la lettre m  
